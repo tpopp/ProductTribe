@@ -1,0 +1,12 @@
+extend layout
+block content
+	p
+		| Hi #{user.name}, you don't have an email listed, so could you please supply one.
+	form(method='POST')
+		input(type='hidden', name='name', value='#{name}')
+		input(type='hidden', name='id', value='#{id}')
+		input(type='hidden', name='pic', value='#{image_url["88px"]}')
+		|Email:
+		input(type='email', name='email', value='example@gmail.com')
+		br
+		input(type='submit', value='Submit')
